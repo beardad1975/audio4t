@@ -1,3 +1,7 @@
+# disabled ffmpeg not installed warning
+import warnings
+warnings.filterwarnings("ignore", category=RuntimeWarning)
+
 from pydub import AudioSegment 
 from pydub.generators import Sine , WhiteNoise, Square
 from pydub.playback import play
