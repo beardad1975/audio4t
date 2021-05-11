@@ -5,7 +5,7 @@ import setuptools
 
 setuptools.setup(
     name="audio4t",
-    version="0.0.0",
+    version="0.0.1",
     author="Wen-Hung, Chang 張文宏",
     author_email="beardad1975@nmes.tyc.edu.tw",
     description="Audio wrapper for Teenagers",
