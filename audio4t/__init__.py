@@ -11,7 +11,8 @@ import pyaudio
 from . import common
 
 __all__ = [ 
-            '正弦波', '播放聲音', '方波', '白雜訊', '開啟wav檔', '多維陣列轉換', '設置聲音擷取', '擷取聲音',
+            '正弦波', '播放聲音', '方波', '白噪音', '開啟wav檔', '多維陣列轉換', '設置聲音擷取', '擷取聲音',
+             'play', '播放', '聲音轉陣列'
             ]
 
 # init
@@ -81,7 +82,7 @@ class 方波(Square):
     def 轉成聲音(self, 持續時間=1000.0, 音量=-10.0):
         return self.to_audio_segment(duration=持續時間, volume=音量)
 
-class 白雜訊(WhiteNoise):
+class 白噪音(WhiteNoise):
     def __init__(self, 取樣率=44100, 位元深度=16):
         WhiteNoise.__init__(self, sample_rate=取樣率, bit_depth=位元深度)
 
@@ -92,10 +93,16 @@ class 白雜訊(WhiteNoise):
 def 播放聲音(audio_segment):
     play(audio_segment)
 
+def 播放(audio_segment):
+    play(audio_segment)
+
 def 開啟wav檔(檔名):
     return AudioSegment.from_wav(檔名)
 
 def 多維陣列轉換(tone):
+    return  np.asarray(tone.get_array_of_samples() )
+
+def 聲音轉陣列(tone):
     return  np.asarray(tone.get_array_of_samples() )
 
 # microphone
