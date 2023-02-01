@@ -5,7 +5,7 @@ import setuptools
 
 setuptools.setup(
     name="audio4t",
-    version="0.0.4",
+    version="0.0.5",
     author="Wen-Hung, Chang 張文宏",
     author_email="beardad1975@nmes.tyc.edu.tw",
     description="Audio learning wrapper library for Teenagers",
@@ -16,7 +16,7 @@ setuptools.setup(
     platforms=["Windows"],
     python_requires=">=3.8",
     packages=['audio4t','聲音模組'],
-    install_requires = ['pyaudio == 0.2.13','pydub == 0.25.1', 'simpleaudio == 1.0.4'],
+    install_requires = ['pyaudio == 0.2.13','pydub == 0.25.1' ],
         classifiers=[
             "Programming Language :: Python :: 3",
             "License :: OSI Approved :: MIT License",
